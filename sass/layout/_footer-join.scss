@@ -1,0 +1,24 @@
+/* приєднуйтесь */
+
+.footer-join {
+  @media screen and(min-width:$desktop) {
+    width: 206px;
+    height: 80px;
+    margin-left: 70px;
+  }
+
+  @media screen and(max-width:1199px) {
+    text-align: center;
+    margin-bottom: 60px;
+  }
+}
+
+.footer-join__title {
+  @extend %footer-title;
+  margin-bottom: 20px;
+}
+
+.join-social {
+  @extend %flex-item;
+  justify-content: center;
+}

@@ -1,0 +1,76 @@
+/* Модалка */
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  background-color: rgba(0, 0, 0, 0.2);
+
+  width: 100vw;
+  height: 100vh;
+
+  transition: opacity 500ms,
+    visibility 500ms var(--cubic-bazier);
+
+  overflow-y: scroll;
+
+  @media screen and(max-width:767px) {
+    padding: 93px 15px;
+  }
+}
+
+.backdrop.is-hidden {
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.backdrop.is-hidden .modal {
+  transform: scale(0.75) rotate(180deg)
+    translate(100%);
+}
+
+.modal {
+  position: relative;
+  padding: 40px;
+
+  transform: scale(1) rotate(0);
+  transition: transform 500ms;
+  background-color: var(--white-color);
+
+  @media screen and(min-width:$tablet) {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 450px;
+  }
+
+  @media screen and(min-width:$desktop) {
+    width: 528px;
+  }
+}
+
+.modal-btn {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+
+  @extend %flex-item;
+  align-items: center;
+  justify-content: center;
+
+  width: 30px;
+  height: 30px;
+
+  border-radius: 50%;
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+
+
+&:hover,
+&:focus {
+  fill: var(--acent-color);
+  }
+}

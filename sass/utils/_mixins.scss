@@ -1,0 +1,12 @@
+@mixin font($fw, $fz, $ln, $ls: 0.03em) {
+  font-weight: $fw;
+  font-size: $fz;
+  line-height: $ln;
+  letter-spacing: $ls;
+}
+
+@mixin bd($wh, $solid, $color) {
+  border-bottom: $wh $solid $color;
+  border-left: $wh $solid $color;
+  border-right: $wh $solid $color;
+}

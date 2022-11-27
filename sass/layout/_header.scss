@@ -1,0 +1,80 @@
+/* page-header */
+
+.header {
+border-bottom: 1px solid #ececec;
+}
+
+.header-nav {
+  @extend %flex-item;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 60px;
+}
+
+.site-container {
+  @media screen and(max-width:767px) {
+    display: none;
+  }
+
+  @media screen and(min-width:$tablet) {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+    justify-content: space-between;
+    margin-left: 88px;
+  }
+
+  @media screen and(min-width:$desktop) {
+    margin-left: 93px;
+  }
+}
+
+.menu-toggle {
+  display: inline-flex;
+  margin: 0;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+
+  &:hover,
+  &:focus {
+    fill: var(--acent-color);
+  }
+
+  @media screen and(min-width:$tablet) {
+    display: none;
+  }
+}
+
+// меню контейнера мобильного
+.menu-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+
+  padding: 48px 10px 48px 40px;
+  background-color: #fff;
+
+  transform: translateX(100%);
+  transition: transform 250ms var(--cubic-bazier);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  overflow-y: scroll;
+  z-index: 999;
+}
+
+// открить меню
+.menu-container.is-open {
+  transform: translateX(0);
+}
+
+.js-close-menu {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+}

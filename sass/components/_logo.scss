@@ -1,0 +1,27 @@
+/* Logo */
+
+.logo {
+  font-family: Raleway, sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 1.16;
+  color: var(--acent-color);
+  text-decoration: none;
+
+  @media screen and(min-width:$desktop) {
+    font-size: 26px;
+    line-height: 1.19;
+  }
+}
+
+.logo-header--color {
+  color: #000000;
+}
+
+.footer-logo {
+  margin-bottom: 20px;
+}
+
+.logo-footer--color {
+  color: var(--white-color);
+}

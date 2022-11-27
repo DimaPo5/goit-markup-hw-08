@@ -1,0 +1,44 @@
+/* WORK */
+
+.work {
+  padding-top: 0;
+  @media screen and(max-width:1199px) {
+    display: none;
+  }
+}
+
+.work__title {
+  margin-bottom: 50px;
+}
+
+.work-list {
+  @extend %flex-item;
+
+  &__item:nth-child(n + 2) {
+    margin-left: 30px;
+  }
+}
+
+.work-annexes {
+  position: relative;
+}
+
+.work-annexes__text {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+
+  width: 100%;
+  height: 70px;
+
+  background: rgba(47, 48, 58, 0.8);
+  color: var(--white-color);
+
+  @extend %flex-item;
+  align-items: center;
+  justify-content: center;
+
+  line-height: 1.14;
+  text-transform: uppercase;
+  font-weight: bold;
+}

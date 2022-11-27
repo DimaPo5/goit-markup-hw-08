@@ -1,0 +1,65 @@
+// иконки на соц.мережи
+
+.social-network {
+  @extend %flex-item;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  }
+
+.social-network__item + .social-network__item {
+  margin-left: 10px;
+}
+
+.social-networklink {
+  @extend %flex-item;
+  align-items: center;
+  justify-content: center;
+
+  width: 44px;
+  height: 44px;
+
+  fill: #afb1b8;
+  border-radius: 50%;
+  transition: fill 250ms var(--cubic-bazier),
+    background-color 250ms var(--cubic-bazier);
+
+  &:hover,
+  &:focus {
+    fill: var(--white-color);
+    background-color: var(--acent-color);
+  }
+}
+
+.social-network__icon {
+  width: 20px;
+  height: 20px;
+}
+
+// иконки футер на соц.мережи
+
+.social-networklink--grey {
+  background: rgba(255, 255, 255, 0.1);
+  fill: var(--white-color);
+}
+
+// мобильні иконки на соц.мережу
+.mob-social {
+  @extend %flex-item;
+  flex-wrap: wrap;
+  margin-left: -10px;
+}
+
+.mob-socail__link {
+  text-decoration: none;
+  color: var(--acent-color);
+  @include font(500, 18px, 1.22, 0.02em);
+  border-left: 1px solid rgba(33, 33, 33, 0.2);
+  margin-left: 10px;
+  padding-left: 10px;
+}
+
+.mob-socail__link--reset {
+  padding: 0;
+  border: none;
+}

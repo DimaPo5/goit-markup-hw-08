@@ -1,0 +1,136 @@
+/* Форма в модалкі */
+
+.modal-text__details {
+  @include font(700, 20px, 1.5);
+
+  margin-bottom: 12px;
+  text-align: center;
+
+  @media screen and(min-width:$desktop) {
+    @include font(700, 20px, 1.15);
+  }
+}
+
+.modal-form__field {
+  margin-bottom: 10px;
+
+  &:last-of-type {
+    margin-bottom: 20px;
+  }
+}
+
+.modal-form__label {
+  @include font(400, 12px, 1.16, 0.01em);
+
+  margin-bottom: 4px;
+  display: block;
+  color: var(--secondary-color);
+}
+
+.modal-form__container {
+  position: relative;
+  // width: 448px;
+}
+
+.modal-form__input {
+  width: 100%;
+  height: 40px;
+
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  padding-left: 42px;
+  outline: none;
+  cursor: pointer;
+  transition: border 250ms var(--cubic-bazier);
+
+  &:focus {
+    border: 1px solid var(--acent-color);
+  }
+
+  &:focus + .modal-form__icon {
+    fill: var(--acent-color);
+  }
+}
+
+.modal-form__icon {
+  width: 18px;
+  height: 18px;
+  position: absolute;
+  top: 11px;
+  left: 12px;
+  transition: fill 250ms var(--cubic-bazier);
+}
+
+.modal-form__text {
+  padding: 12px 16px;
+  height: 120px;
+  resize: none;
+
+  &::placeholder {
+    @include font(400, 12px, 1.16, 0.01em);
+
+    color: rgba(117, 117, 117, 0.5);
+  }
+}
+
+
+
+.modal-form__policy {
+  @extend %flex-item;
+  align-items: center;
+  justify-content: center;
+
+  @include font(400, 12px, 1.16);
+
+  color: var(--secondary-color);
+
+  @media screen and(min-width:$desktop) {
+    @include font(400, 14px, 1.71);
+  }
+}
+
+.modal-form__item-check {
+  width: 16px;
+  height: 15px;
+
+  border: 2px solid var(--main-color);
+  border-radius: 2px;
+  margin-right: 8px;
+
+  @extend %flex-item;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-form__check:checked
+  + .modal-form__item-check {
+  background-color: var(--acent-color);
+  border-color: transparent;
+}
+
+.modal-form__check-icon {
+  fill: var(--white-color);
+}
+
+// Усмови договору
+
+.modal-form__contract {
+  margin-left: 5px;
+  color: var(--acent-color);
+}
+
+// модалка кнопка
+.send-btn {
+  @extend %btn-style;
+}
+
+.send-btn.active {
+  @extend %btn-style__active;
+
+  width: 200px;
+  height: 50px;
+  display: block;
+  margin: 30px auto 0 auto;
+
+  text-align: center;
+}
