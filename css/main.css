@@ -266,7 +266,7 @@ img {
   text-decoration: none;
   color: var(--acent-color);
   font-weight: 500;
-  font-size: 18px;
+  font-size: 12px;
   line-height: 1.22;
   letter-spacing: 0.02em;
   border-left: 1px solid rgba(33, 33, 33, 0.2);
@@ -274,6 +274,14 @@ img {
   padding-left: 10px;
 }
 
+@media screen and (min-width: 480px) {
+  .mob-socail__link {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1.22;
+    letter-spacing: 0.02em;
+  }
+}
 .mob-socail__link--reset {
   padding: 0;
   border: none;
@@ -807,7 +815,7 @@ img {
 
 .mobile-contacts__link--active {
   font-weight: 500;
-  font-size: 34px;
+  font-size: 29px;
   line-height: 1.17;
   letter-spacing: 0.02em;
   color: var(--acent-color);

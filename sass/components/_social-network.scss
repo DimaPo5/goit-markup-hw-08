@@ -53,10 +53,15 @@
 .mob-socail__link {
   text-decoration: none;
   color: var(--acent-color);
-  @include font(500, 18px, 1.22, 0.02em);
+  @include font(500, 12px, 1.22, 0.02em);
   border-left: 1px solid rgba(33, 33, 33, 0.2);
   margin-left: 10px;
   padding-left: 10px;
+}
+@media screen and (min-width: 480px) {
+  .mob-socail__link {
+    @include font(500, 18px, 1.22, 0.02em);
+  }
 }
 
 .mob-socail__link--reset {

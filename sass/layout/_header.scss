@@ -69,7 +69,7 @@ border-bottom: 1px solid #ececec;
 }
 
 // открить меню
-.menu-container.is-open {
+.menu-container .is-open {
   transform: translateX(0);
 }
 

@@ -96,7 +96,7 @@
 }
 
 .mobile-contacts__link--active {
-  @include font(500, 34px, 1.17, 0.02em);
+  @include font(500, 29px, 1.17, 0.02em);
 
  color: var(--acent-color); 
 }
