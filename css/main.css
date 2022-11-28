@@ -874,6 +874,16 @@ img {
   }
 }
 
+@media screen and (min-width: 768px) {
+  .hero-title {
+    width: 360px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .hero-title {
+    width: 696px;
+  }
+}
 .hero-btn {
   font-weight: 700;
   font-size: 16px;
